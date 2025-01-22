@@ -10,15 +10,131 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <style>
+      body {
+        background-color: #f4f6f9;
+        color: #333;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .navbar {
+        background-color: #53667a;
+      }
+
+      .navbar-brand, .nav-link {
+        color: #ffffff !important;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #f0f0f0 !important;
+      }
+
+      .product-card {
+        margin-bottom: 30px;
+      }
+
+      .card-body {
+        padding: 2rem;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+        color: #0056b3;
+        font-weight: 600;
+      }
+
+      .product-price {
+        font-size: 1.25rem;
+        color: #28a745;
+        font-weight: bold;
+      }
+
+      .product-description {
+        color: #6c757d;
+        font-size: 1rem;
+        margin: 1rem 0;
+      }
+
+      .add-to-cart-btn {
+        background-color: #28a745;
+        color: #ffffff;
+        font-weight: 600;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1.5rem;
+      }
+
+      .add-to-cart-btn:hover {
+        background-color: #218838;
+      }
+
+      .container {
+        margin-top: 50px;
+      }
+
+      .footer {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 20px;
+      }
+
+      .footer p {
+        margin: 0;
+        font-size: 0.9rem;
+      }
+
+      .card {
+        background-color: #ffffff;
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+
+      .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+
+      .cart-btn {
+        background-color: #17a2b8;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1.5rem;
+        font-weight: 600;
+      }
+
+      .cart-btn:hover {
+        background-color: #138496;
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .col-md-4 {
+        margin-bottom: 2rem;
+      }
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="#">Market Place</a>
       <button
         class="navbar-toggler"
         type="button"
-        data-toggle="collapse"
-        data-target="#navbarNav"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
         aria-controls="navbarNav"
         aria-expanded="false"
         aria-label="Toggle navigation"
@@ -26,49 +142,33 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item">
             <a class="nav-link" href="index.html">Products</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="checkout.html">Checkout</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="confirmation.html">Confirmation</a>
           </li>
         </ul>
       </div>
     </nav>
 
+    <!-- Cart Section (Moved above products) -->
     <div class="container mt-5">
-      <h2>Cart</h2>
-      <div id="cart-list">
-        <!-- Cart items will be dynamically inserted here -->
-      </div>
-      <button class="btn btn-primary" id="checkout-button">Checkout</button>
+      <form action="checkout.html" method="get">
+        <h2 class="text-center">Shopping Cart</h2>
+        <div id="cart-list"></div>
+        <button class="cart-btn" id="checkout-button">Checkout</button>
+      </form>
     </div>
 
+    <!-- Products Section -->
     <div class="container mt-5">
-      <h1>Products</h1>
-      <div class="row" id="product-list">
-        <!-- Products will be dynamically inserted here -->
-        <div class="col-md-4">
-          <div class="card mb-4">
-              <img src="https://placehold.co/100" class="card-img-top" alt="Product 1">
-              <div class="card-body">
-                  <h5 class="card-title">Product 1</h5>
-                  <p class="card-text">$10.99</p>
-                  <p class="card-text">Description for product 1</p>
-                  <button class="btn btn-primary add-to-cart" data-id="1">Add to Cart</button>
-              </div>
-          </div>
-      </div>
-      </div>
+      <h1 class="text-center">Our Products</h1>
+      <div class="row" id="product-list"></div>
     </div>
 
-    <footer class="bg-light text-center py-3">
-      <p>&copy; 2025 E-commerce Website. All rights reserved.</p>
+    <footer class="footer text-center py-3">
+      <p>&copy; 2025 E-Commerce Website. All rights reserved.</p>
     </footer>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
@@ -76,8 +176,77 @@
     ></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        
-        });
+        const productList = document.querySelector("#product-list");
+        let productsData = [];
+        let productHTML = "";
+        fetch("products.json")
+          .then((response) => response.json())
+          .then((data) => {
+            productsData = data.products;
+            data.products.forEach((product) => {
+              productHTML += `<div class="col-md-4">
+                <div class="card mb-4 product-card">
+                  <img src="image/pngtree-cheese-burger-design-png-image_2437303.jpg" class="card-img-top" alt="${product.name}">
+                  <div class="card-body">
+                    <h5 class="card-title">${product.name}</h5>
+                    <p class="card-text product-price">$${product.price}</p>
+                    <p class="card-text product-description">${product.description}</p>
+                    <button class="btn add-to-cart-btn" data-id="${product.id}">Add to Cart</button>
+                  </div>
+                </div>
+              </div>`;
+            });
+            productList.innerHTML = productHTML;
+            document.querySelectorAll(".add-to-cart-btn").forEach((button) => {
+              button.addEventListener("click", addToCart);
+            });
+            const cart = [];
+
+            function addToCart(event) {
+              const productId = event.target.getAttribute("data-id");
+              const product = productsData.find((p) => p.id == productId);
+              let cartItem = {
+                id: product.id,
+                name: product.name,
+                price: product.price,
+              };
+              cart.push(cartItem);
+              renderCart();
+            }
+
+            function renderCart() {
+              const cartList = document.getElementById("cart-list");
+              let cartItemHTML = "";
+              cart.forEach((product) => {
+                cartItemHTML += `<div class="col-md-4">
+                  <div class="card mb-4">
+                    <div class="card-body">
+                      <h5>${product.name}</h5>
+                      <p>$${product.price}</p>
+                      <input type="hidden" name="id" value="${product.id}" />
+                      <input type="hidden" name="name" value="${product.name}" />
+                      <input type="hidden" name="price" value="${product.price}" />
+                      <button class="btn btn-danger remove-from-cart" data-id="${product.id}">
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                </div>`;
+              });
+              cartList.innerHTML = cartItemHTML;
+              document.querySelectorAll(".remove-from-cart").forEach((button) => {
+                button.addEventListener("click", removeFromCart);
+              });
+            }
+
+            function removeFromCart(event) {
+              const productId = event.target.getAttribute("data-id");
+              const productIndex = cart.findIndex((product) => product.id == productId);
+              cart.splice(productIndex, 1);
+              renderCart();
+            }
+          });
+      });
     </script>
   </body>
 </html>

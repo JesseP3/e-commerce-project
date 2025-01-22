@@ -2,23 +2,65 @@
   "products": [
     {
       "id": 1,
-      "name": "Product 1",
-      "description": "Description for product 1",
-      "price": 10.99,
-      "image": "https://placehold.co/100"
+      "name": "Adidas Euro 2024 Pro Official Match Ball",
+      "description": "Official match ball for Euro 2024. High-quality grip and durability for professional games.",
+      "price": 90.99,
+      "image": "https://cdn.shoplightspeed.com/shops/611228/files/59594017/650x750x2/adidas-euro-2024-pro-official-match-ball-white-mul.jpg"
     },
     {
       "id": 2,
-      "name": "Product 2",
-      "description": "Description for product 2",
+      "name": "Soccer Cleats",
+      "description": "High-performance soccer cleats designed for comfort and speed on the field.",
       "price": 12.99,
       "image": "https://placehold.co/100"
     },
     {
       "id": 3,
-      "name": "Product 3",
-      "description": "Description for product 3",
+      "name": "Shin Guards",
+      "description": "Lightweight and durable shin guards for enhanced protection during play.",
       "price": 15.99,
+      "image": "https://placehold.co/100"
+    },
+    {
+      "id": 4,
+      "name": "Goalkeeper Gloves",
+      "description": "Gloves designed for optimal grip and protection for goalkeepers.",
+      "price": 25.99,
+      "image": "https://placehold.co/100"
+    },
+    {
+      "id": 5,
+      "name": "Soccer Socks",
+      "description": "Breathable and comfortable socks designed for soccer players.",
+      "price": 8.99,
+      "image": "https://placehold.co/100"
+    },
+    {
+      "id": 6,
+      "name": "Soccer Jersey",
+      "description": "High-quality soccer jersey designed for comfort during play. Available in various sizes.",
+      "price": 20.99,
+      "image": "https://placehold.co/100"
+    },
+    {
+      "id": 7,
+      "name": "Soccer Training Shorts",
+      "description": "Breathable and flexible shorts perfect for training sessions.",
+      "price": 18.99,
+      "image": "https://placehold.co/100"
+    },
+    {
+      "id": 8,
+      "name": "Soccer Ball Pump",
+      "description": "Portable soccer ball pump to keep your balls inflated for every game.",
+      "price": 9.99,
+      "image": "https://placehold.co/100"
+    },
+    {
+      "id": 9,
+      "name": "Soccer Water Bottle",
+      "description": "Stay hydrated with this durable soccer water bottle.",
+      "price": 6.99,
       "image": "https://placehold.co/100"
     }
   ]
